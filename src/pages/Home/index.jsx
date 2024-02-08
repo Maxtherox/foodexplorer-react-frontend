@@ -1,9 +1,10 @@
 import { Container } from "./styles";
+import { Header } from "../../Components/Header";
 
 export function Home(){
     return(
         <Container>
-            <h1>teste</h1>
+            <Header/>
         </Container>
     )
 }
