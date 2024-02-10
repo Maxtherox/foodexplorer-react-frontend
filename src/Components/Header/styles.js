@@ -4,12 +4,14 @@ import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints"
 export const Container = styled.div`
     position: relative;
     transition: 1s;
-
-    
 `
 
 export const Headerbase = styled.header`
-position: relative;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 2;
+
     width: 100%;
     height: 11.4rem;
     background-color: ${({theme}) => theme.COLORS.DARK_DARK_700};
@@ -39,7 +41,7 @@ export const Content = styled.div`
         input{
             width: 100%;
         }
-        @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
+        @media (min-width:${DEVICE_BREAKPOINTS.XL}) {
             display: flex;
             width: 58.1rem;
             margin: auto 0;

@@ -7,13 +7,11 @@ import { Search } from "../Search";
 import { Footer } from "../Footer";
 
 export function Header(){
-    function openNav() {
-        
+    function openNav() {    
      document.getElementById("mySidebar").style.visibility = "visible";
      document.getElementById("mySidebar").style.animation = "menuOpen 0.5s";
      document.getElementById("mySidebar").style.width = "100%";
      preventDefault();
-        
       }
       function closeNav() {
        
@@ -24,11 +22,19 @@ export function Header(){
 
         preventDefault();
       }
-      
+      let prevScrollpos = window.scrollY;
+        window.onscroll = function() {
+            let currentScrollPos = window.scrollY;
+            if (prevScrollpos < currentScrollPos) {
+                document.getElementById("navbar").style.position = "fixed"
+                document.getElementById("navbar").style.top = "0";
+            }
+        prevScrollpos = currentScrollPos;
+    }
 
     return(
-        <Container>
-            <Headerbase>
+        <Container >
+            <Headerbase id="navbar">
                 <Content>
                 <a className="MenuOpen" onClick={openNav} ><img src={MenuIcon} alt="" /></a>
                 <h1><img src={logoIcon} alt=""/>food explorer </h1>
@@ -51,7 +57,6 @@ export function Header(){
                   <Search/>
                   <a onClick={closeNav}>Sair</a>  
                 </main>
-
             </Menu>
             </Headerbase>
         </Container>

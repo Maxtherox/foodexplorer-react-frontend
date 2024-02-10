@@ -5,16 +5,15 @@ export const Container = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    width: 100%;
     height: 77px;
     background-color: ${({theme}) => theme.COLORS.DARK_DARK_600};
     font-size: 15px;
 
-    position: absolute;
-    bottom: 1;
-
+    position: relative;
+    bottom: 0;
     left: 0;
-    right: 0;
+    z-index: 3;
 
 
 
