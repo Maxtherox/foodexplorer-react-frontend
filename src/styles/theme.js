@@ -19,8 +19,8 @@ export default {
         DARK_DARK_900: "#0D1D25",
         DARK_DARK_1000: "#192227",
 
-        GRADIENTS_100: "linear-gradient(to right, rgba(0, 10, 15, 0.2725), rgba(0, 10, 15, 1))",
-        GRADIENTS_200: "linear-gradient(to right, rgba(0, 19, 28, 1), rgba(0, 19, 28, 1))",
+        GRADIENTS_100: "linear-gradient(0deg, rgba(0, 10, 15, 0.2725), rgba(0, 10, 15, 1))",
+        GRADIENTS_200: "linear-gradient(180deg, rgba(9, 30, 38, 1), rgba(0, 19, 28, 1))",
 
         TINTS_TOMATO_100: "#750310",
         TINTS_TOMATO_200: "#92000E",

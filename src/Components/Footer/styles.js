@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints"
 
 export const Container = styled.footer`
     display: flex;
@@ -10,12 +11,23 @@ export const Container = styled.footer`
     font-size: 15px;
 
     position: absolute;
-    bottom: 0;
-    top: 1;
-    right: 0;
+    bottom: 1;
+
     left: 0;
+    right: 0;
+
+
+
+
+    @media (min-width:${DEVICE_BREAKPOINTS.MD}) {
+        justify-content: space-between;
+        padding: 0 16.3rem;
+    }
+    
     > span{
         font-weight: 200;
+       
+        
     }
 
     .Copyright {
