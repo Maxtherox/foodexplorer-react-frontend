@@ -3,26 +3,17 @@ import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints"
 
 export const Container = styled.div`
 
+    
 `
 export const Main = styled.main`
 
-/*
-#container-group::before{ 
+    overflow-y: auto;
+    overflow-x: hidden;
 
-        content: "";
-        position: absolute;
-        height: 260px;
-        width: 1120px;
-        background-color: red;
-        bottom: 13px;
-        
-        margin: 0 auto;
-        z-index: -1;
-    }
-*/
 `
 
 export const Banner = styled.div`
+ 
     display: flex;
     justify-content: flex-end;
     align-items: center;
