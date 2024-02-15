@@ -11,7 +11,6 @@ export function Header(){
      document.getElementById("mySidebar").style.visibility = "visible";
      document.getElementById("mySidebar").style.animation = "menuOpen 0.5s";
      document.getElementById("mySidebar").style.width = "100%";
-     preventDefault();
       }
       function closeNav() {
        
@@ -19,8 +18,6 @@ export function Header(){
           document.getElementById("mySidebar").style.animation = "menuClose 0.5s";
           document.getElementById("mySidebar").style.width = "0%";
         
-
-        preventDefault();
       }
       let prevScrollpos = window.scrollY;
         window.onscroll = function() {
