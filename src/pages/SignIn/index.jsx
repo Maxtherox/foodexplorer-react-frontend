@@ -2,6 +2,7 @@ import { Container, Form, LogoDesktop } from "./styles";
 import logo from "../../assets/logo.png"
 import { Input } from "../../Components/Input";
 import { Button } from "../../Components/Button";
+import { Link } from "react-router-dom";
 
 export function SignIn(){
     return(
@@ -15,7 +16,7 @@ export function SignIn(){
             <h1><img src={logo} alt=""/>food explorer </h1>
                 <fieldset>   
             
-                <legend>Crie sua conta</legend>
+                <legend>Faça login</legend>
 
                 <label htmlFor="email">Email</label>
                 <Input
@@ -32,8 +33,8 @@ export function SignIn(){
                 minLength= "6"
                 />
 
-                <Button title="Criar conta"></Button>
-                <a to="/" href="#"> Crie uma conta</a>
+                <Button title="Entrar"></Button>
+                <Link to="/register" href="#"> Crie uma conta</Link>
                 </fieldset>
             </Form>
         </Container>

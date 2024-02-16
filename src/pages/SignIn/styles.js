@@ -7,11 +7,14 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
     
     @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
         display: flex;
         flex-direction: row;
-        margin: auto 0;
+        max-width: 1406px;
+        justify-content: center;
+        margin: 0 auto;
         height: 100vh;
         width: 100%;
         padding: 0 10.8rem 0 15.3rem ;
