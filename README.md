@@ -6,13 +6,14 @@ Bem-vindo ao Food Explorer, esse repositório se trata do desenvolvimento do fro
 
 ## Telas da aplicação
 
-> Login/Registro desktop
+### Login desktop
 ![alt](src/assets/github/prints/login_desktop.png)
-![alt](src/assets/github/prints/signUp_desktop.png)
+### Cadastro desktop
+![alt](src/assets/github/prints/signup_desktop.png)
 
-> Login/Registro mobile
+### Login & Cadastro desktop
 <div style="display: inline_block">
-<img src="src/assets/github/prints/signin_mobile.png" alt="">
-<img src="src/assets/github/prints/signup_mobile.png" alt="">
+<img src="src/assets/github/prints/signin_mobile.png" width="324px"alt="">
+<img src="src/assets/github/prints/signup_mobile.png" width="324px"alt="">
 </div>
 ### Work in progress...
