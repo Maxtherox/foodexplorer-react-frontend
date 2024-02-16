@@ -9,7 +9,7 @@ export const Container = styled.div`
         justify-content: center;
         text-align: center;
         height: 462px;
-        width: 604px;
+
         padding: 40px;
         margin: auto 0;
         margin-top: 50px;
@@ -70,6 +70,7 @@ export const Container = styled.div`
             margin: 0;
         }
         > div span {
+
             font-family: 'Roboto', sans-serif;
             font-size: 20px;
             
