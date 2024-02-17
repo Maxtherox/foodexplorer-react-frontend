@@ -28,7 +28,7 @@ export const Content = styled.div`
     text-align: center;
     align-content: center;
     align-self: center;
-    gap: 7.4rem;
+    gap: 4.2rem;
 
     height: 11.4rem;
     background-color: ${({theme}) => theme.COLORS.DARK_DARK_700};
@@ -58,16 +58,22 @@ export const Content = styled.div`
     @media (min-width:${DEVICE_BREAKPOINTS.MD}) {
         height: 10.4rem;
         justify-content: space-between;
-
+        gap: 6.2rem;
         
         .MenuOpen{
             display: none;
         }
     }
-    @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
-
+    @media (min-width:${DEVICE_BREAKPOINTS.XL}) {
+        gap: 5.2rem;
+    }
+    @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
+        .logoutdisable {
+            display: none;
+        }
     }
 
+    
 
     ;
     > .teste {

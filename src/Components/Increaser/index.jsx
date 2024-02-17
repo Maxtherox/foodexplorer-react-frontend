@@ -1,5 +1,5 @@
 import { Container } from "./styles";
-import { Button } from "../Button";
+
 import React, { useState } from 'react';
 import addition from "../../assets/icons/addition.svg";
 import subtraction from "../../assets/icons/subtraction.svg";
