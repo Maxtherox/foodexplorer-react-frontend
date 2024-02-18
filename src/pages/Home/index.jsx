@@ -6,8 +6,29 @@ import { Section } from "../../Components/Section";
 import { Sliderfood } from "../../Components/Sliderfood";
 import { CardFood } from "../../Components/CardFood";
 import spaguetti from "../../assets/foods/spaguetti.png";
+import { useAuth } from '../../hooks/auth';
+import { USER_ROLE } from "../../utils/roles";
+import { api } from '../../services/api';
+import { useState, useEffect } from 'react';
+
 
 export function Home(){
+
+    const [foods, setFoods] = useState([])
+    const [search, setSearch] = useState("")
+
+    useEffect(() => {
+        async function fetchFoods() {
+            try {
+                const response = await api.get(`/foods?name=${search}&withCategories=true`);
+                setFoods(response.data);
+            } catch (error) {
+                console.error('Erro ao buscar alimentos:', error);
+            }
+        }
+    
+        fetchFoods();
+    }, [search]);
     return(
         <Container>
             <Header/>
@@ -21,13 +42,19 @@ export function Home(){
                         </div>
                     </Banner>
                     <Section title="Refeições">    
-                        <CardFood  
-                            image={spaguetti}
-                            title="Spaguetti Gambe"
-                            description="Massa fresca com camarões e pesto."
-                            price="R$ 179,97"
-                        />
-                       
+                    {
+                        foods
+                            .filter(food => 
+                                food.categories && 
+                                food.categories.some(category => category.name === "sobremesas")
+                            )
+                            .map(food => (
+                                <CardFood  
+                                    key={String(food.id)}
+                                    data={food}
+                                />
+                            ))
+                    }            
                       </Section>
               
                 </Main>

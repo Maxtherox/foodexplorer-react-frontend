@@ -8,9 +8,11 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+  > h1 {
+    font-size: 50px;
+  }
   > a {
-    color: ${({ theme }) => theme.COLORS.LIGHT_LIGHT_500};
+    color: white;
     margin-top: 24px;
   }
 `;

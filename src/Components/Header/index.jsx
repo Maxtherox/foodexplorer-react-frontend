@@ -1,4 +1,4 @@
-import { Container, Menu, Content, ContentMenu, Headerbase } from "./styles";
+import { Container, Menu, Content, ContentMenu, Headerbase, LogoAdmin } from "./styles";
 import logoIcon from "../../assets/Logo.svg"
 import MenuIcon from "../../assets/icons/Menu.svg"
 import OrderIcon from "../../assets/icons/carrinho.svg"
@@ -9,10 +9,17 @@ import LogoutSvg from "../../assets/icons/logout.svg"
 import { Link } from "react-router-dom";
 import { USER_ROLE } from "../../utils/roles";
 import { useAuth } from '../../hooks/auth';
+import { useNavigate } from 'react-router-dom';
 
 export function Header(){
 
-    const {user} = useAuth();
+    const {user, signOut} = useAuth();
+    const navigation = useNavigate()
+
+    function handleSignOut(){
+        navigation("/");
+        signOut();
+    }
 
     function openNav() {    
      document.getElementById("mySidebar").style.visibility = "visible";
@@ -38,7 +45,12 @@ export function Header(){
             <Headerbase id="navbar">
                 <Content>
                 <a className="MenuOpen" onClick={openNav} ><img src={MenuIcon} alt="" /></a>
-                <h1><img src={logoIcon} alt=""/>food explorer </h1>
+                {user.role === USER_ROLE.CUSTOMER &&
+                <h1><img src={logoIcon} alt=""/>food explorer</h1>
+                }
+                {user.role === USER_ROLE.ADMIN && 
+                <h1><img src={logoIcon} alt=""/>food explorer <span className="admintag">admin</span> </h1>
+                }
                 <Search className="search"/>   
                 {user.role === USER_ROLE.CUSTOMER &&
                     <a className="teste" href="">
@@ -49,12 +61,11 @@ export function Header(){
                 }
                 {user.role === USER_ROLE.ADMIN &&
                 <Link to="/new" className="teste" href="">
-                    <label htmlFor=""></label>
-                    <p>Novo prato</p>
-                    <img src={OrderIcon} alt="" />              
+
+                    <p>Novo prato</p>         
                 </Link>  
                 }
-                <a className="logoutdisable" href=""><img src={LogoutSvg} alt="logout" /></a>
+                <Link onClick={handleSignOut} className="logoutdisable" href=""><img src={LogoutSvg} alt="logout" /></Link>
                 </Content>
             <Menu id="mySidebar">
                 <ContentMenu>
@@ -62,7 +73,10 @@ export function Header(){
                 </ContentMenu>
                 <main>
                   <Search/>
-                  <Link onClick={closeNav}>Sair</Link>  
+                  {user.role === USER_ROLE.ADMIN &&
+                    <Link to="/new" onClick={closeNav}>Novo prato</Link>  
+                  }              
+                  <Link onClick={handleSignOut}>Sair</Link>  
                 </main>
             </Menu>
             </Headerbase>

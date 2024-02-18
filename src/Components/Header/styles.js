@@ -28,7 +28,7 @@ export const Content = styled.div`
     text-align: center;
     align-content: center;
     align-self: center;
-    gap: 4.2rem;
+    gap: 7.4rem;
 
     height: 11.4rem;
     background-color: ${({theme}) => theme.COLORS.DARK_DARK_700};
@@ -45,7 +45,7 @@ export const Content = styled.div`
             display: flex;
             width: 58.1rem;
             margin: auto 0;
-            gap: 4.4rem;
+
         }
         @media (min-width:${DEVICE_BREAKPOINTS.MD}) {
             display: flex;
@@ -54,18 +54,53 @@ export const Content = styled.div`
 
         }
     }
+    > h1 {
+    display: flex;
+    max-width: 146px;
+    font-size: 2.1rem;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    white-space: nowrap;  
+    > img {
+        width: 2.4rem;
+
+    }
+    > span {
+        position: relative;
+        font-size: 12px;
+        font-weight: 300;
+        color: ${({theme}) => theme.COLORS.TINTS_CAKE_200};
+
+        top: 18px;
+        right: 43px;
+
+        @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
+            position: static;
+        }
+    }
+    @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
+        min-width: 146px;
+        font-size: 24px;   
+        
+    }
+
+    }
 
     @media (min-width:${DEVICE_BREAKPOINTS.MD}) {
         height: 10.4rem;
         justify-content: space-between;
-        gap: 6.2rem;
+        gap: 3.2rem;
         
         .MenuOpen{
             display: none;
         }
     }
     @media (min-width:${DEVICE_BREAKPOINTS.XL}) {
-        gap: 5.2rem;
+        gap: 3.2rem;
     }
     @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
         .logoutdisable {
@@ -74,8 +109,6 @@ export const Content = styled.div`
     }
 
     
-
-    ;
     > .teste {
         position: relative;
 
@@ -135,27 +168,6 @@ export const Content = styled.div`
             margin: auto 0;
     }
     } 
-    > h1 {
-        display: flex;
-        font-size: 2.1rem;
-        text-align: center;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        white-space: nowrap;  
-        > img {
-            width: 2.4rem;
-
-        }
-
-        @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
-            min-width: 146px;
-            font-size: 24px;   
-            
-    }
-        
-    }
     
 `
 export const ContentMenu = styled.div`
@@ -237,3 +249,28 @@ export const Menu = styled.div`
 ;
 `
 
+export const LogoAdmin = styled.div`
+    display: flex;
+    max-width: 146px;
+    gap: 0;
+    > img {
+        margin: 0;
+    }
+    > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
+        margin: 0;
+        > h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+`
+/* backup h1 style
+
+    
+}
+*/

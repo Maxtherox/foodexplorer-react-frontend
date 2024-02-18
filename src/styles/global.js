@@ -55,6 +55,6 @@ export default createGlobalStyle`
   
   ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background-color:${({theme}) => theme.COLORS.DARK_DARK_800};
+    background-color:${({theme}) => theme.COLORS.DARK_DARK_400};
   }
 `;

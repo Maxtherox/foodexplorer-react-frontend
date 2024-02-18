@@ -29,8 +29,6 @@ export function Routes(){
           return <AdminRoutes/>;
         case USER_ROLE.CUSTOMER:
           return <CustomerRoutes/>;
-        case USER_ROLE.SALE:
-          return <SaleRoutes/>;
           default:
             return <CustomerRoutes/>;
       }

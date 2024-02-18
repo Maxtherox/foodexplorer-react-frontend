@@ -1,41 +1,80 @@
-import { createContext, useContext, useState } from "react";
-import {api} from '../services/api';
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect
+} from 'react';
+import Cookies from 'js-cookie';
 
-export const AuthContext = createContext({});
+const AuthContext = createContext({});
 
-function AuthProvider({ children}){
-    const [data, setData] = useState({});
-    
-    async function signIn({email, password}){
+import { api } from "../services/api";
 
-        try{
-            const response = await api.post("/sessions", {email, password});
-            const {user, token} = response.data;
+function AuthProvider({ children }) {
+  const [data, setData] = useState({});
 
-            api.defaults.headers.authorization = "Bearer " + token;
+  async function signIn({ email, password }) {
+    try {
+      const response = await api.post(
+        "sessions", 
+        { email, password },
+        {withCredentials: true })
+      const { user } = response.data;
 
-            setData({user, token})
-        }catch(error){
-            if(error.response){
-                alert(error.response.data.message);
-            }else{
-                alert("Não foi possível efetuar login.")
-            }
-        }
-        
+      localStorage.setItem("@estock:user", JSON.stringify(user));
+
+      setData({ user });
+
+    } catch (error) {
+      if (error.response) {
+        alert(error.response.data.message);
+      } else {
+        alert("Não foi possível entrar.");
+      }
     }
+  };
 
-    return (
-        <AuthContext.Provider value={{signIn, user: data.user}}>
-            {children}
-        </AuthContext.Provider> 
-    )
+  function signOut() {
+    // Remover dados do localStorage
+    localStorage.removeItem("@estock:user");
+    
+    // Remover token do cookie
+    Cookies.remove('token');
+
+    setData({});
+  
+    // Limpar o estado de dados (se necessário)
+  }
+
+
+  useEffect(() => {
+;
+    const user = localStorage.getItem("@estock:user");
+
+    if (user) {
+
+      setData({
+
+        user: JSON.parse(user)
+      });
+    }
+  }, []);
+
+  return (
+    <AuthContext.Provider value={{
+      signIn,
+      signOut,
+      user: data.user
+    }}>
+      {children}
+    </AuthContext.Provider>
+  )
 }
 
-function useAuth(){
-    const context = useContext(AuthContext);
+function useAuth() {
+  const context = useContext(AuthContext);
 
-    return context;
+  return context;
 }
 
-export { AuthProvider, useAuth};
+export { AuthProvider, useAuth };
