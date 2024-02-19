@@ -111,6 +111,9 @@ export const Section = styled.section`
        > button{
         margin-left: 0;
         width: 131px;
+        @media (max-width:${DEVICE_BREAKPOINTS.MD}){
+            width: 100%;
+        }
        }
     }
 

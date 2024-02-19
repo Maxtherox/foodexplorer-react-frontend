@@ -3,7 +3,7 @@ import logoIcon from "../../assets/Logo.svg"
 import MenuIcon from "../../assets/icons/Menu.svg"
 import OrderIcon from "../../assets/icons/carrinho.svg"
 import CloseIcon from "../../assets/icons/close.svg"
-import { Search } from "../Search";
+import Search  from "../Search";
 import { Footer } from "../Footer";
 import LogoutSvg from "../../assets/icons/logout.svg"
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ import { USER_ROLE } from "../../utils/roles";
 import { useAuth } from '../../hooks/auth';
 import { useNavigate } from 'react-router-dom';
 
-export function Header(){
+export function Header({onSearch} ){
 
     const {user, signOut} = useAuth();
     const navigation = useNavigate()
@@ -51,17 +51,16 @@ export function Header(){
                 {user.role === USER_ROLE.ADMIN && 
                 <h1><img src={logoIcon} alt=""/>food explorer <span className="admintag">admin</span> </h1>
                 }
-                <Search className="search"/>   
+                <Search onSearch={onSearch}  className="search"/>   
                 {user.role === USER_ROLE.CUSTOMER &&
-                    <a className="teste" href="">
+                <Link to="/notfound" className="teste" href="">
                     <label htmlFor="">0</label>
                     <p>Pedidos: </p>
-                    <img src={OrderIcon} alt="" />              
-                </a>  
+                    <img src={OrderIcon} alt=""/>              
+                </Link>  
                 }
                 {user.role === USER_ROLE.ADMIN &&
                 <Link to="/new" className="teste" href="">
-
                     <p>Novo prato</p>         
                 </Link>  
                 }
@@ -72,7 +71,7 @@ export function Header(){
                     <a onClick={closeNav}><img src={CloseIcon} alt="" />Menu</a>
                 </ContentMenu>
                 <main>
-                  <Search/>
+                  <Search onSearch={onSearch}/>
                   {user.role === USER_ROLE.ADMIN &&
                     <Link to="/new" onClick={closeNav}>Novo prato</Link>  
                   }              

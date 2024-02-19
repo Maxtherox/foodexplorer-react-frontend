@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints";
 
 export const Container = styled.div`
   height: 100vh;
@@ -14,5 +15,15 @@ export const Container = styled.div`
   > a {
     color: white;
     margin-top: 24px;
+  }
+
+  @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
+    > h1 {
+    font-size: 28px;
+     }
+
+     > a {
+      font-size: 12px;
+     }
   }
 `;

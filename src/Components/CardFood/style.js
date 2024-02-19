@@ -19,8 +19,10 @@ export const Container = styled.div`
 
 
         h2 {
-            font-size: 24px;
+            max-width: 30.0rem;
+            font-size: 2.4rem;
             font-weight: bold;
+            margin: 0 auto;
             color: ${({theme}) => theme.COLORS.LIGHT_LIGHT_300};
         }
 

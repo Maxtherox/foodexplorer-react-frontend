@@ -11,7 +11,6 @@ import { USER_ROLE } from "../../utils/roles";
 import { api } from '../../services/api';
 import { useState, useEffect } from 'react';
 
-
 export function Home(){
 
     const [foods, setFoods] = useState([])
@@ -31,7 +30,7 @@ export function Home(){
     }, [search]);
     return(
         <Container>
-            <Header/>
+            <Header onSearch={setSearch}/>
                 <Main>
             
                     <Banner id="container-group">
