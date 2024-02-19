@@ -9,8 +9,7 @@ export const Container = styled.div`
         justify-content: center;
         text-align: center;
         height: 462px;
-
-        padding: 40px;
+        min-width: 304px;
         margin: auto 0;
         margin-top: 50px;
         gap: 15px;
@@ -18,12 +17,16 @@ export const Container = styled.div`
         border-radius: 10px;
         border: 1px solid ${({theme}) => theme.COLORS.DARK_DARK_300};
 
-        > h2 {
+
+        h2 {
             font-size: 24px;
             font-weight: bold;
+            color: ${({theme}) => theme.COLORS.LIGHT_LIGHT_300};
         }
 
         > p {
+            max-width: 256px;
+            margin: 0 auto;
             font-family: 'Roboto', sans-serif;
             font-size: 14px ;
             font-weight: regular;
@@ -41,8 +44,8 @@ export const Container = styled.div`
         .favorite{
             
             position: relative;
-            top: 10px;
-            left: 123px;
+            top: -10px;
+            left: 103px;
             z-index: 2;
             cursor: pointer;
             :hover{
@@ -50,7 +53,9 @@ export const Container = styled.div`
             }
 
         }
-        
+        @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
+            min-width: 304px;
+        }
 
         > div {
             display: flex;

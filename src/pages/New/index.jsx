@@ -19,7 +19,7 @@ export function New(){
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
-    const [categories, setCategories] = useState("");
+    const [category, setCategory] = useState("");
 
     function handleAddIngredient(){     
         if (newIngredient.trim() !== "") {
@@ -55,7 +55,7 @@ export function New(){
             return alert("Erro: Você deixou um ingrediente no campo para adicionar, mas não clicou em adicionar. Clique no sinal de + para adicionar!");
         }
 
-        if (!categories) {
+        if (!category) {
             return alert("Erro: Você não selecionou a categoria do prato!");
         }
 
@@ -73,7 +73,7 @@ export function New(){
         formData.append("avatar", avatar);
         formData.append("name", name);
         formData.append("description", description);
-        formData.append("categories", categories);
+        formData.append("category", category);
         formData.append("price", price);
 
         ingredients.map(ingredient => (
@@ -156,13 +156,13 @@ export function New(){
                         </div>
                         <div>
                         <label htmlFor="category">Categoria</label>
-                        <select name="category" defaultValue={'default'} id="category" className="category" onChange={e => setCategories(e.target.value)}>
+                        <select name="category" defaultValue={'default'} id="category" className="category" onChange={e => setCategory(e.target.value)}>
                             <option value="default" disabled>Selecione a categoria</option>
-                            <option value="refeicoes">Refeições</option>
-                            <option value="sobremesas">Sobremesas</option>
-                            <option value="bebidas">Bebídas</option>
-                            <option value="principais">Pratos principais</option>
-                            <option value="salada">Salada</option>
+                            <option value="meals">Refeições</option>
+                            <option value="desserts">Sobremesas</option>
+                            <option value="drinks">Bebídas</option>
+                            <option value="principals">Pratos principais</option>
+                            <option value="salads">Saladas</option>
                         </select>
                         </div>
                         

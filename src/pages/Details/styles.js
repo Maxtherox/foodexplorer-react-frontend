@@ -107,6 +107,12 @@ export const Section = styled.section`
         
         
     }
+    .buttonEdit{
+       > button{
+        margin-left: 0;
+        width: 131px;
+       }
+    }
 
     @media (max-width:${DEVICE_BREAKPOINTS.MD}){
         text-align: center;

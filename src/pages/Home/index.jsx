@@ -20,7 +20,7 @@ export function Home(){
     useEffect(() => {
         async function fetchFoods() {
             try {
-                const response = await api.get(`/foods?name=${search}&withCategories=true`);
+                const response = await api.get(`/foods?name=${search}`);
                 setFoods(response.data);
             } catch (error) {
                 console.error('Erro ao buscar alimentos:', error);
@@ -43,12 +43,36 @@ export function Home(){
                     </Banner>
                     <Section title="Refeições">    
                     {
-                        foods
-                            .filter(food => 
-                                food.categories && 
-                                food.categories.some(category => category.name === "sobremesas")
+                        foods.filter(food => 
+                                food.category == "meals"
                             )
-                            .map(food => (
+                            .map((food) => (
+                                <CardFood  
+                                    key={String(food.id)}
+                                    data={food}
+                                />
+                            ))
+                    }            
+                      </Section>
+                    <Section title="Sobremesas">    
+                    {
+                        foods.filter(food => 
+                                food.category == "desserts"
+                            )
+                            .map((food) => (
+                                <CardFood  
+                                    key={String(food.id)}
+                                    data={food}
+                                />
+                            ))
+                    }            
+                      </Section>
+                    <Section title="Bebidas">    
+                    {
+                        foods.filter(food => 
+                                food.category == "drinks"
+                            )
+                            .map((food) => (
                                 <CardFood  
                                     key={String(food.id)}
                                     data={food}

@@ -20,8 +20,8 @@ export function CardFood({ data, ...rest }) {
 
   const increaseQuantity = (e) => {
     e.preventDefault();
-    if (quantity > 19) {
-      alert("Erro: A quantidade máxima é de 20 unidades")
+    if (quantity > 9) {
+      alert("Erro: A quantidade máxima é de 10 unidades")
       return;
     }
     setQuantity(prevQuantity => prevQuantity + 1);
@@ -40,14 +40,16 @@ export function CardFood({ data, ...rest }) {
         <div className='favorite'> <img className='heartIcon'  id='heartIcon' src={heart} alt="" /></div>
        }
       {user.role === USER_ROLE.ADMIN &&
-        <Link to={`/edit/${data.id}`}>
+       <Link to={`/edit/${data.id}`}>
         <div className='favorite'> <img  id='heartIcon' src={edit} alt="icone de edição" /></div>
         </Link>
        }
-      <img className='image' src={imageURL} alt="imagem do prato" />      
+      <img className='image' src={imageURL} alt="imagem do prato" />    
+      <Link to={`/details/${data.id}`}>
       <h2>{data.name}</h2>
-      <p>{data.descriptio}</p>
-      <span className="price">R$ {data.price}</span>
+      </Link>      
+      <p>{data.description}</p>
+      <span className="price">R$ {data.price.toLocaleString('PT')}</span>
 
       {user.role === USER_ROLE.CUSTOMER &&
         <div>

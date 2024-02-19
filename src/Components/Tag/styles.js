@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints";
 
 export const Container = styled.div`
 display: flex;
@@ -11,4 +12,5 @@ display: flex;
     border-radius: 5px;
     align-items: center;
     text-align: center;
+   
 `
