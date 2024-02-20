@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints";
+import * as animations from '../../styles/animations';
 
 export const Container = styled.div`
     height: 100vh;
@@ -44,7 +45,7 @@ export const Form = styled.form`
     max-width: 31.6rem;
     display: flex;
     flex-direction: column;
-
+    animation:${animations.scale} .5s ease-in-out;
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
             min-width: 47.6rem;
             background-color: ${({theme}) => theme.COLORS.DARK_DARK_700};

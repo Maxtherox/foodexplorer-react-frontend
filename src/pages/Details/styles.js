@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints";
+import * as animations from '../../styles/animations';
 
 export const Container = styled.div`
 
@@ -13,7 +14,7 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
         gap: 42px;
-
+        animation:${animations.topToBottom} 0.6s ease-in-out;
 
         overflow-x: hidden;
         @media (max-width:${DEVICE_BREAKPOINTS.MD}){
@@ -34,6 +35,7 @@ export const Container = styled.div`
 export const DivButton = styled.div`
 width: 1124px;
 margin: 0 auto;
+
 @media (max-width:${DEVICE_BREAKPOINTS.XL}){
     max-width: 986px;
 }
@@ -47,10 +49,11 @@ margin: 0 auto;
 export const Content = styled.div`
     display: flex;
     align-items: center;
-
+    
     > img {
         max-width: 390px;
         max-height: 390px;
+        animation:${animations.slideIn} 0.6s ease-in-out;
     }
     @media (max-width:${DEVICE_BREAKPOINTS.MD}){
         flex-direction: column;
@@ -75,7 +78,7 @@ export const Section = styled.section`
     flex-direction: column;
     justify-content: center;
     max-width: 687px;
-
+    animation:${animations.slideOut} 0.6s ease-in-out;
     margin-left: 47px;
     @media (max-width:${DEVICE_BREAKPOINTS.MD}){
             margin-bottom: 50px;
@@ -104,8 +107,7 @@ export const Section = styled.section`
             align-items: center;
             margin-bottom: 0;
         }
-        
-        
+         
     }
     .buttonEdit{
        > button{

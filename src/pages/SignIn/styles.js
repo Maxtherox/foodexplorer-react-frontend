@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints";
+import * as animations from '../../styles/animations';
 
 export const Container = styled.div`
     height: 100vh;
@@ -7,7 +8,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
     
     @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
         display: flex;
@@ -23,7 +24,7 @@ export const Container = styled.div`
 `
 export const LogoDesktop = styled.div`
     display: none;
-
+    animation:${animations.slideIn} 1s ease-in-out;
     @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
         display: flex;
         width: 100%;
@@ -44,7 +45,7 @@ export const Form = styled.form`
     max-width: 31.6rem;
     display: flex;
     flex-direction: column;
-
+    animation:${animations.scale} .5s ease-in-out;
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
             min-width: 47.6rem;
             background-color: ${({theme}) => theme.COLORS.DARK_DARK_700};
@@ -59,7 +60,7 @@ export const Form = styled.form`
         gap: 1.0rem;
         font-size: 3.7rem;
         font-weight: bold;
-
+        
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
             display: none;
         }
@@ -67,7 +68,7 @@ export const Form = styled.form`
 
     > fieldset legend {
         display: none;
-        
+
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
             display: flex;
             align-self: center;
@@ -79,6 +80,7 @@ export const Form = styled.form`
     }
 
     > fieldset {
+        
         border: none;
     }
 
@@ -94,5 +96,7 @@ export const Form = styled.form`
         align-items: center;
         justify-content: center;
     }
+
+
 
 `

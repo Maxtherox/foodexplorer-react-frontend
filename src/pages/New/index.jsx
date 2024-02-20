@@ -9,7 +9,6 @@ import { FoodItem } from "../../Components/FoodItem";
 import { api } from '../../services/api'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth } from "../../hooks/auth";
 
 export function New(){
 
@@ -40,11 +39,11 @@ export function New(){
     async function handleNewFood() {
         if (!avatar) {
             console.log(avatar)
-            return alert("Erro: Você não inseriu uma imagem para o prato!");
+            return alert("Erro: Insira uma imagem para o prato!");
         }
         
         if (!name) {
-            return alert("Erro: Você não informou o nome do prato!");
+            return alert("Erro: Insira um nome para o prato!");
         }
 
         if (ingredients.length < 1) {
@@ -52,19 +51,19 @@ export function New(){
         }
 
         if (newIngredient) {
-            return alert("Erro: Você deixou um ingrediente no campo para adicionar, mas não clicou em adicionar. Clique no sinal de + para adicionar!");
+            return alert("Erro: Á ingredientes preenchido porém não incluido! clique no + para incluir o ingrediente.");
         }
 
         if (!category) {
-            return alert("Erro: Você não selecionou a categoria do prato!");
+            return alert("Erro: É necessário selecionar uma categoria para o seu prato!");
         }
 
         if (!price) {
-            return alert("Erro: Você não informou o preço do prato!");
+            return alert("Erro: informe um preço para o seu prato!");
         }
 
         if (!description) {
-            return alert("Erro: Você não informou uma descrição para o prato!");
+            return alert("Erro: É necessário informar uma descrição para o seu prato!");
         }
 
         setLoading(true);
@@ -87,41 +86,12 @@ export function New(){
                 if (error.response) {
                     alert(error.response.data.message);
                 } else {
-                    alert("Erro ao criar o prato!");
+                    alert("Erro: Não foi possível criar o seu prato!");
                 }
             });  
 
         setLoading(false);
     }
-
-
-
-/*
-    async function handleNewFood(){
-        
-        if (!name){
-            return alert("Digite o titulo da nota")
-        }
-        if(newIngredient){
-            return alert("Tag não adicionada, clique em adicionar ou deixe o campo vazio.")
-        }
-
-        
-            await api.post("/foods", {
-                name,
-                description,
-                price,
-                avatar,
-                ingredients,
-                categories
-            },{withCredentials: true})
-        
-            alert("Nota criada com sucesso!");
-            navigate(-1);
-
-    }
-
-*/
     return(
         <Container>
             <Header/>

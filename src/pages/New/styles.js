@@ -1,15 +1,17 @@
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints";
+import * as animations from '../../styles/animations';
 
 export const Container = styled.div`
     overflow-y: auto;
     > header {
-        position: absolute;
+        position: relative;
         
     }
     > footer {
         position: relative;
         bottom: 0;
+        z-index: -1;
         
         @media (max-width:${DEVICE_BREAKPOINTS.LG}) {
             margin-top: 15.3rem;
@@ -22,7 +24,7 @@ export const Container = styled.div`
         max-width: 112.4rem;
         height: 100vh;
         margin: 0 auto;
-        
+        animation:${animations.slideIn} .6s ease-in-out;
         @media (max-width:${DEVICE_BREAKPOINTS.LG}) {
             max-width: 66.4rem;
         }
@@ -59,7 +61,7 @@ export const Form = styled.form`
         background-color: ${({theme}) => theme.COLORS.DARK_DARK_900};
         border-radius: 8px;
         @media (max-width:${DEVICE_BREAKPOINTS.LG}) {
-            width: 66.4rem;
+            width: 11.8rem;
         }
         @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
             max-width: 36.4rem;
@@ -212,7 +214,7 @@ export const Form = styled.form`
         left:0;    
         background-color: ${({theme}) => theme.COLORS.TINTS_TOMATO_400};
         width: 38.4rem;
-
+        
         
     }
     }

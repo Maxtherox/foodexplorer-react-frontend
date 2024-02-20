@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints";
+import * as animations from '../../styles/animations';
 
 export const Container = styled.div`
     overflow-y: auto;
+    
     > header {
-        position: absolute;
-        
+        position: relative;
+
     }
     > footer {
         position: sticky;
@@ -25,7 +27,7 @@ export const Container = styled.div`
         max-width: 112.4rem;
         height: 100vh;
         margin: 0 auto;
-        
+        animation:${animations.slideIn} .6s ease-in-out;
         @media (max-width:${DEVICE_BREAKPOINTS.LG}) {
             max-width: 66.4rem;
         }
@@ -40,6 +42,7 @@ export const Form = styled.form`
     > fieldset {
         
         > legend {
+            
             font-family: 'Poppins', sans-serif;
             font-size: 3.2rem;
             font-weight: 400;

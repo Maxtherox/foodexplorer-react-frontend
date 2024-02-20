@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints"
+import * as animations from '../../styles/animations';
 
 export const Container = styled.header`
     position: relative;
     transition: 1s;
+    animation:${animations.topToBottom} .5s ease-in-out;
 `
 
 export const Headerbase = styled.div`
@@ -222,27 +224,25 @@ export const Menu = styled.div`
     }
     @keyframes menuOpen {
         0% {
-            width: 28%;
+            transform: translateX(-100%);
+
         }
 
         100%{
-            width: 100%;
+            transform: translateX(0);
+
         }
     };
 
     @keyframes menuClose {
         0% {
-            width: 100%;
-            opacity: 100%;
+            transform: translateX(0);
+
         }
         
-        60%{
-            opacity: 0%;
-        }
-
         100%{
-            width: 0%;
-            opacity: 0%;
+            transform: translateX(-100%);
+
         }
     };
     }

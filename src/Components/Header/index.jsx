@@ -11,6 +11,7 @@ import { USER_ROLE } from "../../utils/roles";
 import { useAuth } from '../../hooks/auth';
 import { useNavigate } from 'react-router-dom';
 
+
 export function Header({onSearch} ){
 
     const {user, signOut} = useAuth();
@@ -29,7 +30,7 @@ export function Header({onSearch} ){
       function closeNav() {   
           document.getElementById("mySidebar").style.visibility = "hidden";
           document.getElementById("mySidebar").style.animation = "menuClose 0.5s";
-          document.getElementById("mySidebar").style.width = "0%";
+          document.getElementById("mySidebar").style.width = "100%";
       }
       let prevScrollpos = window.scrollY;
         window.onscroll = function() {

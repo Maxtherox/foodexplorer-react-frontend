@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints";
-
+import * as animations from '../../styles/animations';
+ 
 
 
 export const Container = styled.div`
@@ -16,7 +17,7 @@ export const Container = styled.div`
         background-color: ${({theme}) => theme.COLORS.DARK_DARK_200};
         border-radius: 10px;
         border: 1px solid ${({theme}) => theme.COLORS.DARK_DARK_300};
-
+        animation:${animations.topToBottom} 1s ease-in-out;
 
         h2 {
             max-width: 30.0rem;

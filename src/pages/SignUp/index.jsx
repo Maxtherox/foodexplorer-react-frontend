@@ -31,7 +31,7 @@ export function SignUp(){
                 if(error.response){
                     alert(error.response.data.message)
                 }else{
-                    alert("Não foi possível cadastrar")
+                    alert("Erro: Não foi possível cadastrar usuário!")
                 }
             } )
             .finally(() => {

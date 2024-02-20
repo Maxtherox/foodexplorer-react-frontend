@@ -3,11 +3,7 @@ import { Header } from "../../Components/Header";
 import { Footer } from "../../Components/Footer";
 import Maskgroup from "../../assets/maskgroup.png"
 import { Section } from "../../Components/Section";
-import { Sliderfood } from "../../Components/Sliderfood";
 import { CardFood } from "../../Components/CardFood";
-import spaguetti from "../../assets/foods/spaguetti.png";
-import { useAuth } from '../../hooks/auth';
-import { USER_ROLE } from "../../utils/roles";
 import { api } from '../../services/api';
 import { useState, useEffect } from 'react';
 

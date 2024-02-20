@@ -1,19 +1,27 @@
 import styled from "styled-components"
 import { DEVICE_BREAKPOINTS } from "../../styles/devicesBreakpoints"
+import * as animations from '../../styles/animations';
 
 export const Container = styled.div`
 
     
 `
 export const Main = styled.main`
-
+    animation:${animations.topToBottom} .6s ease-in-out;
     overflow-y: auto;
     overflow-x: hidden;
-
+    > section:nth-child(2) {
+            animation:${animations.slideOut} .9s ease-in-out;
+        }
+    > section:nth-child(3) {
+            animation:${animations.slideIn} 1.1s ease-in-out;
+        }
+    > section:nth-child(4) {
+            animation:${animations.slideOut} 1.3s ease-in-out;
+        }
 `
 
 export const Banner = styled.div`
- 
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -25,6 +33,7 @@ export const Banner = styled.div`
     margin: 0 auto;
     margin-top: 266px;
     margin-bottom: 62px;
+    animation:${animations.slideIn} .7s ease-in-out;
     @media (max-width:${DEVICE_BREAKPOINTS.XL}) {
         max-width: 820px;
         margin-top: 224px;
@@ -92,5 +101,6 @@ export const Banner = styled.div`
                 max-width: 202px;               
             }
         }
+        
     }
 `
