@@ -1,10 +1,10 @@
-import { Container, Menu, Content, ContentMenu, Headerbase, LogoAdmin } from "./styles";
+import { Container, Menu, Content, ContentMenu, Headerbase } from "./styles";
 import logoIcon from "../../assets/Logo.svg"
 import MenuIcon from "../../assets/icons/Menu.svg"
 import OrderIcon from "../../assets/icons/carrinho.svg"
 import CloseIcon from "../../assets/icons/close.svg"
 import Search  from "../Search";
-import { Footer } from "../Footer";
+
 import LogoutSvg from "../../assets/icons/logout.svg"
 import { Link } from "react-router-dom";
 import { USER_ROLE } from "../../utils/roles";
