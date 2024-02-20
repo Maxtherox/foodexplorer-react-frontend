@@ -13,23 +13,23 @@ export const fadeIn = keyframes`
 
 export const slideIn = keyframes`
   from {
-    transform: translateX(-100%);
+    transform: translateX(-100px);
     opacity: 0%;
   }
   to {
     transform: translateX(0);
-    opacity: 100%;
+    opacity: 100px;
   }
 `;
 
 export const slideOut = keyframes`
   from {
-    transform: translateX(100%);
+    transform: translateX(100px);
     opacity: 0%;
   }
   to {
     transform: translateX(0);
-    opacity: 100%;
+    opacity: 100px;
   }
 `;
 export const scale = keyframes`
@@ -65,3 +65,4 @@ export const topToBottom = keyframes`
       transform: translateY(0);
   }
 `
+
