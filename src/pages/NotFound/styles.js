@@ -19,7 +19,7 @@ export const Container = styled.div`
 
   @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
     > h1 {
-    font-size: 28px;
+    font-size: 20px;
      }
 
      > a {
