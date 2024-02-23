@@ -10,20 +10,20 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   > h1 {
-    font-size: 50px;
+    font-size: 5.0rem;
   }
   > a {
     color: white;
-    margin-top: 24px;
+    margin-top: 2.4rem;
   }
 
   @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
     > h1 {
-    font-size: 20px;
+    font-size: 2rem;
      }
 
      > a {
-      font-size: 12px;
+      font-size: 1.2rem;
      }
   }
 `;

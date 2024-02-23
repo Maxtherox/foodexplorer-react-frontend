@@ -26,34 +26,34 @@ export const Banner = styled.div`
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    height: 260px;
+    height: 26.0rem;
     max-width: 112.0rem;
-    min-width: 376px;
+    min-width: 37.6rem;
     background: ${({theme}) => theme.COLORS.GRADIENTS_200};
     margin: 0 auto;
-    margin-top: 266px;
-    margin-bottom: 62px;
+    margin-top: 26.6rem;
+    margin-bottom: 6.2rem;
     animation:${animations.slideIn} .7s ease-in-out;
     @media (max-width:${DEVICE_BREAKPOINTS.XL}) {
-        max-width: 820px;
-        margin-top: 224px;
+        max-width: 82.0rem;
+        margin-top: 22.4rem;
         > img {
             position: absolute;
-            width: 600px;
+            width: 60.0rem;
         }  
     }
 
 
      @media (max-width:${DEVICE_BREAKPOINTS.MD}){
-         height: 120px;
-         width: 376px;
-         margin-top: 154px;
+         height: 12.0rem;
+         width: 37.6rem;
+         margin-top: 15.4rem;
 
          > img {
-            height: 149px;
-            width: 197px;
-            margin-bottom: 10px;
-            margin-left: 52px;
+            height: 14.9rem;
+            width: 19.7rem;
+            margin-bottom: 1rem;
+            margin-left: 5.2rem;
          }
     }
 
@@ -63,30 +63,30 @@ export const Banner = styled.div`
            bottom: -14px; 
         }
     > div {
-        margin-right: 104px;
+        margin-right: 10.4rem;
         @media (max-width:${DEVICE_BREAKPOINTS.XL}){
-            margin-right: 60px;
+            margin-right: 6.0rem;
 
         }
         @media (max-width:${DEVICE_BREAKPOINTS.LG}){
-            margin-right: 40px;
+            margin-right: 4.0rem;
             text-wrap: wrap
         }
         @media (max-width:${DEVICE_BREAKPOINTS.MD}){
-            margin-right: 10px;
+            margin-right: 1rem;
         }
 
         h1{ 
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
-            font-size: 40px;
+            font-size: 4.0rem;
             color: ${({theme}) => theme.COLORS.LIGHT_LIGHT_300};
             @media (max-width:${DEVICE_BREAKPOINTS.XL}){
-                font-size: 30px;
+                font-size: 3.0rem;
             }
 
             @media (max-width:${DEVICE_BREAKPOINTS.MD}){
-                font-size: 18px;
+                font-size: 1.8rem;
             }
         }
         p{
@@ -94,11 +94,11 @@ export const Banner = styled.div`
             line-height: 140%;
             color: ${({theme}) => theme.COLORS.LIGHT_LIGHT_300};
             @media (max-width:${DEVICE_BREAKPOINTS.XL}){
-                font-size: 12px;
+                font-size: 1.2rem;
             }
 
             @media (max-width:${DEVICE_BREAKPOINTS.MD}){
-                max-width: 202px;               
+                max-width: 20.2rem;               
             }
         }
         

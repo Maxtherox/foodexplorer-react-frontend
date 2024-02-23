@@ -13,7 +13,7 @@ export const Container = styled.div`
     @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
         display: flex;
         flex-direction: row;
-        max-width: 1406px;
+        max-width: 140.6rem;
         justify-content: center;
         margin: 0 auto;
         height: 100vh;

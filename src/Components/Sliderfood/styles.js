@@ -10,19 +10,19 @@ export const Container = styled.div`
 
     display: flex;
     justify-content: center;
-    height: 530px;
-    width: 1122px;
-    margin-bottom: 48px;
+    height: 53.0rem;
+    width: 112.2rem;
+    margin-bottom: 4.8rem;
 
     overflow-x: auto ;
     overflow-y: auto;
 
     @media (max-width:${DEVICE_BREAKPOINTS.XL}){
-        width: 820px;
+        width: 82.0rem;
     }
     @media (max-width:${DEVICE_BREAKPOINTS.MD}){
-        width: 376px;
-        height: 341px;
+        width: 37.6rem;
+        height: 34.1rem;
     }
 
     .teste{

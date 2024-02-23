@@ -107,9 +107,9 @@ export const Form = styled.form`
     select {
         border: none;
         border-radius: 8px;
-        width: 364px;
-        height: 48px;
-        padding-left: 10px;
+        width: 36.4rem;
+        height: 4.8rem;
+        padding-left: 1rem;
         color: ${({theme}) => theme.COLORS.LIGHT_LIGHT_400};
         background-color: ${({theme}) => theme.COLORS.DARK_DARK_900};
         

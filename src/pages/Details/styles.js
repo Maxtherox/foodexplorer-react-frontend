@@ -13,7 +13,7 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 42px;
+        gap: 4.2rem;
         animation:${animations.topToBottom} 0.6s ease-in-out;
 
         overflow-x: hidden;
@@ -37,10 +37,10 @@ width: 1124px;
 margin: 0 auto;
 
 @media (max-width:${DEVICE_BREAKPOINTS.XL}){
-    max-width: 986px;
+    max-width: 98.6rem;
 }
 @media (max-width:${DEVICE_BREAKPOINTS.MD}){
-    max-width: 316px;
+    max-width: 31.6rem;
 }
 
 
@@ -51,8 +51,8 @@ export const Content = styled.div`
     align-items: center;
     
     > img {
-        max-width: 390px;
-        max-height: 390px;
+        max-width: 39.0rem;
+        max-height: 39.0rem;
         animation:${animations.slideIn} 0.6s ease-in-out;
     }
     @media (max-width:${DEVICE_BREAKPOINTS.MD}){
@@ -60,15 +60,15 @@ export const Content = styled.div`
         align-items: center;
         height: 100vh;
         > img{
-            max-width: 264px;
-            max-height: 264px;
+            max-width: 26.4rem;
+            max-height: 26.4rem;
         }
     }
     @media (max-width:${DEVICE_BREAKPOINTS.XL}){
 
         > img {
-            max-width: 300px;
-            max-height: 300px;
+            max-width: 30.0rem;
+            max-height: 30.0rem;
         }
     }
 ` 
@@ -77,33 +77,33 @@ export const Section = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 687px;
+    max-width: 68.7rem;
     animation:${animations.slideOut} 0.6s ease-in-out;
-    margin-left: 47px;
+    margin-left: 4.7rem;
     @media (max-width:${DEVICE_BREAKPOINTS.MD}){
-            margin-bottom: 50px;
+            margin-bottom: 5.0rem;
         }
     > h1 {
         font-family: 'Poppins', sans-serif;
-        font-size: 40px ;
+        font-size: 4.0rem ;
         font-weight: 500;
         color: ${({theme}) => theme.COLORS.LIGHT_LIGHT_300};
         margin-bottom: 24px;
     }
 
     > p {
-        font-size: 24px;
+        font-size: 2.4rem;
         font-weight: 300;
         color: ${({theme}) => theme.COLORS.LIGHT_LIGHT_300};
-        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
     }
 
     > span {
         display: flex;
         align-items: center;
         > button{ 
-            margin-left: 33px;
-            width: 162px;
+            margin-left: 3.3rem;
+            width: 16.2rem;
             align-items: center;
             margin-bottom: 0;
         }
@@ -112,7 +112,7 @@ export const Section = styled.section`
     .buttonEdit{
        > button{
         margin-left: 0;
-        width: 131px;
+        width: 13.1rem;
         @media (max-width:${DEVICE_BREAKPOINTS.MD}){
             width: 100%;
         }
@@ -121,18 +121,18 @@ export const Section = styled.section`
 
     @media (max-width:${DEVICE_BREAKPOINTS.MD}){
         text-align: center;
-        max-width: 316px;
-        margin-top: 36px;
+        max-width: 31.6rem;
+        margin-top: 3.6rem;
         margin-left: 0;
         > h1 {
             
-            font-size: 27px;
+            font-size: 2.7rem;
         }
 
         > p {
             margin: 0 auto;         
-            font-size: 16px;
-            margin-bottom: 24px;
+            font-size: 1.6rem;
+            margin-bottom: 2.4rem;
         }
     }
 
@@ -140,12 +140,12 @@ export const Section = styled.section`
 
 export const Tags = styled.section`
  display: flex;
- gap: 12px;
- margin-bottom: 52px;
- max-width: 600px;
+ gap: 1.2rem;
+ margin-bottom: 5.2rem;
+ max-width: 60.0rem;
  flex-wrap: wrap;
     @media (max-width:${DEVICE_BREAKPOINTS.MD}){
-        max-width: 316px;
+        max-width: 31.6rem;
         flex-wrap: wrap;
         
  }

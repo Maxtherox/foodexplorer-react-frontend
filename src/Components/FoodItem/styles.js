@@ -11,8 +11,8 @@ export const Container = styled.div `
 
     border:${({theme, isnew}) => isnew ? `2px dashed ${theme.COLORS.LIGHT_LIGHT_500}` : "none"};
 
-    border-radius: 10px;
-    padding-right: 16px;
+    border-radius: 1rem;
+    padding-right: 1.6rem;
 
     > button {
         display: flex;
@@ -31,9 +31,9 @@ export const Container = styled.div `
         }
     > input {
         font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        height: 32px;
-        width: 118px;
+        font-size: 1.6rem;
+        height: 3.2rem;
+        width: 11.8rem;
         text-align: center;
         color: ${({theme}) => theme.COLORS.LIGHT_LIGHT_100};
         background: transparent;

@@ -6,9 +6,9 @@ export const Container = styled.footer`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 77px;
+    height: 7.7rem;
     background-color: ${({theme}) => theme.COLORS.DARK_DARK_600};
-    font-size: 15px;
+    font-size: 1.5rem;
 
     position: relative;
     bottom: 0;
@@ -31,9 +31,9 @@ export const Container = styled.footer`
 
     .Copyright {
         font-family: 'DM Sans', sans-serif;
-        font-size: 12px;
+        font-size: 1.2rem;
         color: ${({theme}) => theme.COLORS.LIGHT_LIGHT_200};
-        margin-left: 30px;
+        margin-left: 3.0rem;
     }
 
     .logo {
@@ -45,8 +45,8 @@ export const Container = styled.footer`
         font-weight: 700;
         > img {
             margin-right: 6px;
-            max-width: 22px;
-            max-height: 18px;
+            max-width: 2.2rem;
+            max-height: 1.8rem;
         }
     }
 `

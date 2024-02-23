@@ -9,13 +9,13 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        height: 462px;
-        min-width: 304px;
+        height: 46.2rem;
+        min-width: 30.4rem;
         margin: auto 0;
-        margin-top: 50px;
-        gap: 15px;
+        margin-top: 5.0rem;
+        gap: 1.5rem;
         background-color: ${({theme}) => theme.COLORS.DARK_DARK_200};
-        border-radius: 10px;
+        border-radius: 1.0rem;
         border: 1px solid ${({theme}) => theme.COLORS.DARK_DARK_300};
         animation:${animations.fadeIn} 1.1s ease-in-out;
 
@@ -28,27 +28,27 @@ export const Container = styled.div`
         }
 
         > p {
-            max-width: 256px;
+            max-width: 25.6rem;
             margin: 0 auto;
             font-family: 'Roboto', sans-serif;
-            font-size: 14px ;
+            font-size: 1.4rem ;
             font-weight: regular;
             color: ${({theme}) => theme.COLORS.LIGHT_LIGHT_400};
         }
         .price{
             font-family: 'Roboto', sans-serif;
             color: ${({theme}) => theme.COLORS.TINTS_CAKE_200};
-            font-size: 32px;
+            font-size: 3.2rem;
         }
         .image {
             margin: 0 auto;
-            width: 176px;
+            width: 17.6rem;
         }
         .favorite{
             
             position: relative;
             top: -10px;
-            left: 103px;
+            left: 10.3rem;
             z-index: 2;
             cursor: pointer;
             :hover{
@@ -57,14 +57,14 @@ export const Container = styled.div`
 
         }
         @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
-            min-width: 304px;
+            min-width: 30.4rem;
         }
 
         > div {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            gap: 14px;
+            gap: 1.4rem;
             align-items: center;         
             text-align: center;
             align-items: center;
@@ -74,13 +74,13 @@ export const Container = styled.div`
         }
 
         > div button {
-            width: 92px;
+            width: 9.2rem;
             margin: 0;
         }
         > div span {
 
             font-family: 'Roboto', sans-serif;
-            font-size: 20px;
+            font-size: 2.0rem;
             
         }
     

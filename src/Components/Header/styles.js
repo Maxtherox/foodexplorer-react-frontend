@@ -58,7 +58,7 @@ export const Content = styled.div`
     }
     > h1 {
     display: flex;
-    max-width: 146px;
+    max-width: 14.6rem;
     font-size: 2.1rem;
     text-align: center;
     align-content: center;
@@ -73,20 +73,20 @@ export const Content = styled.div`
     }
     > span {
         position: relative;
-        font-size: 12px;
+        font-size: 1.2rem;
         font-weight: 300;
         color: ${({theme}) => theme.COLORS.TINTS_CAKE_200};
 
-        top: 18px;
-        right: 43px;
+        top: 1.8rem;
+        right: 4.3rem;
 
         @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
             position: static;
         }
     }
     @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
-        min-width: 146px;
-        font-size: 24px;   
+        min-width: 14.6rem;
+        font-size: 2.4rem;   
         
     }
 
@@ -215,7 +215,7 @@ export const Menu = styled.div`
         > a {
             display: flex;
         width: 100%;
-        font-size: 24px;
+        font-size: 2.4rem;
         color: white;
         font-weight: 200;
         padding-bottom: 1.0rem;
@@ -251,7 +251,7 @@ export const Menu = styled.div`
 
 export const LogoAdmin = styled.div`
     display: flex;
-    max-width: 146px;
+    max-width: 14.6rem;
     gap: 0;
     > img {
         margin: 0;
@@ -264,7 +264,7 @@ export const LogoAdmin = styled.div`
         margin: 0;
         > h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 2.4rem;
             font-weight: bold;
         }
     }

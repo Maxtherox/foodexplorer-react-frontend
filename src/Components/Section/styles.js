@@ -6,11 +6,11 @@ export const Container = styled.section`
   flex-direction: row;
   height: auto;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 3.0rem;
   align-items: center;
   position: relative;
-  height: 549px;
-  max-width: 1122px;
+  height: 54.9rem;
+  max-width: 112.2rem;
   justify-content: flex-start;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -18,7 +18,7 @@ export const Container = styled.section`
 
   
   > h2 {
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 400;
     color: ${({ theme }) => theme.COLORS.LIGHT_LIGHT_300};
     position: absolute;
@@ -49,10 +49,10 @@ export const Container = styled.section`
   }
 
   @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
-    width: 820px;
+    width: 82.0rem;
   }
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-    width: 376px;
+    width: 37.6rem;
   }
   section.scrollable::before {
   animation: gradientMove 1s linear infinite;
@@ -72,7 +72,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 27px;
+  gap: 2.7rem;
   position: relative;
   z-index: 2;
 
@@ -95,7 +95,7 @@ export const RightArrow = styled.a`
 `;
 
 export const Title = styled.h2`
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 400;
   color: ${({ theme }) => theme.COLORS.LIGHT_LIGHT_300};
   position: relative;
@@ -106,7 +106,7 @@ export const Title = styled.h2`
 
 export const Content = styled.div`
   display: flex;
-  gap: 27px;
+  gap: 2.7rem;
   overflow-x: hidden;
   overflow-y: hidden;
   scroll-behavior: smooth;
